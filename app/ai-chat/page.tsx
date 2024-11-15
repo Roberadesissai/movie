@@ -292,7 +292,7 @@ What would you like to know about today?`,
     setIsStreaming(true);
 
     try {
-      let systemPrompt = `You are CineAI, a knowledgeable movie assistant with access to the user's watchlist and preferences. 
+      const systemPrompt = `You are CineAI, a knowledgeable movie assistant with access to the user's watchlist and preferences. 
       
       Important instructions:
       1. You have full access to the user's watchlist and can provide details about it
@@ -352,7 +352,7 @@ What would you like to know about today?`,
         stream: true,
       });
 
-      let newMessageId = generateUniqueId();
+      const newMessageId = generateUniqueId();
       let accumulatedContent = '';
 
       // Initialize streaming message

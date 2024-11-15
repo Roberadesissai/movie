@@ -26,7 +26,7 @@ export const useCollection = (collectionName, _query, _orderBy) => {
     }
 
     const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
-      let results = []
+      const results = []
       snapshot.docs.forEach(doc => {
         results.push({ ...doc.data(), id: doc.id })
       })
